@@ -1,6 +1,6 @@
 ---
 title: "Our Leaders | New Beginnings in Christ | Laurens, SC"
-description: "Meet Pastor Dennis Cancel and the leaders who serve New Beginnings in Christ in Laurens, SC."
+description: "Meet Bishop Dennis Cancel and the leaders who serve New Beginnings in Christ in Laurens, SC."
 permalink: "/leaders/"
 bannerTitle: "Our Leaders"
 bannerTopper: "About Us"
@@ -27,7 +27,7 @@ bannerImg: "welcome"
                     <div class="nbc-leader-info">
                         <span class="cs-topper">{{ l.role }}</span>
                         <h2 class="cs-title nbc-ornament">{{ l.name }}</h2>
-                        <p class="cs-text">{{ l.bio }}</p>
+                        {% for p in l.bio %}<p class="cs-text">{{ p }}</p>{% endfor %}
                     </div>
                 </li>
                 {% endfor %}

@@ -16,6 +16,12 @@ module.exports = [
 		text: "A notary is available at the church. Call (864) 201-8798 to schedule.",
 	},
 	{
+		name: "Mustard Seed Ministry",
+		when: "Under the direction of Prophetess Wanda Murphy",
+		photo: "gallery/g7",
+		text: "[Pastor: describe the Mustard Seed Ministry, who it is for, and how to get involved.]",
+	},
+	{
 		name: "[Ministry Name]",
 		when: "[Day and time]",
 		photo: "worship",
