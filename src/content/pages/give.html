@@ -1,0 +1,101 @@
+---
+title: "Give | New Beginnings in Christ | Laurens, SC"
+description: "Give online to New Beginnings in Christ in Laurens, SC through our secure FellowshipOne giving page, or give in person during service."
+permalink: "/give/"
+bannerTitle: "Give"
+bannerTopper: "Tithes & Offerings"
+bannerText: "Thank you for supporting the ministry of New Beginnings in Christ. Give securely online anytime, or in person during service."
+bannerImg: "bible"
+bannerButton: "Give Online"
+eleventyComputed:
+  bannerButtonLink: "{{ client.giving }}"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section id="nbc-band" class="nbc-band-light">
+        <div class="cs-container">
+            <span class="cs-topper">2 Corinthians 9:7</span>
+            <p class="nbc-band-verse">"Every man according as he purposeth in his heart, so let him give... for God loveth a cheerful giver."</p>
+        </div>
+    </section>
+
+    <section class="nbc-section">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Ways to Give</span>
+                    <h2 class="cs-title nbc-ornament">Give in the Way That Works for You</h2>
+                </div>
+            </div>
+            <div class="nbc-give-layout">
+                <div class="nbc-give-feature">
+                    <span class="nbc-give-label">Recommended</span>
+                    <h3>Give Online</h3>
+                    <p>Give a one-time gift or set up recurring giving anytime through our secure FellowshipOne giving page. It only takes a minute.</p>
+                    <ul class="nbc-checks">
+                        <li>One-time or recurring gifts</li>
+                        <li>Give from your phone or computer</li>
+                        <li>Processed securely by FellowshipOne</li>
+                    </ul>
+                    <a href="{{ client.giving }}" class="cs-button-solid" target="_blank" rel="noopener">Give Through FellowshipOne</a>
+                </div>
+                <div class="nbc-give-side">
+                    <div class="nbc-give">
+                        <img src="/assets/svgs/s1.svg" alt="" aria-hidden="true" width="40" height="40">
+                        <h3>Give In Person</h3>
+                        <p>Bring your tithes and offerings to Sunday Worship at 11:00 AM or Wednesday Bible Study at 6:00 PM.</p>
+                        <a href="/visit/">Service times &amp; directions →</a>
+                    </div>
+                    <div class="nbc-give">
+                        <img src="/assets/svgs/phone.svg" alt="" aria-hidden="true" width="40" height="40">
+                        <h3>Questions?</h3>
+                        <p>Call <a href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a> or send us a message, and we'll be glad to help.</p>
+                        <a href="/contact/">Contact us →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-1466" class="nbc-tint-bg">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source srcset="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1044, height: 1218 }) | webp %}" type="image/webp">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1044, height: 1218 }) | jpeg %}" alt="" width="522" height="609">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Giving FAQ</span>
+                <h2 class="cs-title nbc-ornament">Common Questions</h2>
+                <ul class="cs-faq-group">
+                    <li class="cs-faq-item active">
+                        <button class="cs-button"><span class="cs-button-text">Is giving online secure?</span></button>
+                        <p class="cs-item-p">Yes. Online gifts are processed through FellowshipOne Giving, a secure giving platform used by churches. Your payment details go to FellowshipOne, not to this website.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Can I set up recurring giving?</span></button>
+                        <p class="cs-item-p">Yes. On the FellowshipOne giving page you can choose a one-time gift or a recurring gift on a schedule that works for you.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Will I get a receipt?</span></button>
+                        <p class="cs-item-p">[Confirm with the church] FellowshipOne can email a receipt for online gifts. For other questions about your giving records, call {{ client.phoneFormatted }}.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Do I have to give to visit?</span></button>
+                        <p class="cs-item-p">Not at all. Guests are never expected to give. Come as you are and worship with us.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll("#faq-1466 .cs-faq-item").forEach((item) => {
+            item.querySelector(".cs-button").addEventListener("click", () => item.classList.toggle("active"));
+        });
+    </script>
+
+{% endblock %}

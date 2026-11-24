@@ -1,0 +1,59 @@
+---
+title: "Watch Services & Sermons | New Beginnings in Christ | Laurens, SC"
+description: "Watch Sunday services, Wednesday Bible studies, and sermons from Pastor Dennis Cancel and New Beginnings in Christ in Laurens, SC."
+permalink: "/watch/"
+bannerTitle: "Watch Online"
+bannerTopper: "Services & Sermons"
+bannerText: "Can't make it in person? Worship with us online. Sunday services and Wednesday Bible studies are streamed on our YouTube channel."
+bannerImg: "gallery/g5"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section class="nbc-section">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Latest Service</span>
+                    <h2 class="cs-title nbc-ornament">Watch the Latest Message</h2>
+                </div>
+                <a href="{{ client.socials.youtube }}?sub_confirmation=1" class="cs-button-solid" target="_blank" rel="noopener">Subscribe on YouTube</a>
+            </div>
+            {% include "components/player.html" %}
+        </div>
+    </section>
+
+    {% if sermons.length %}
+    <section class="nbc-section nbc-tint">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Recent Sermons</span>
+                    <h2 class="cs-title nbc-ornament">More From the Pulpit</h2>
+                </div>
+            </div>
+            <ul class="nbc-sermons">
+                {% for s in sermons %}
+                <li>
+                    <a class="nbc-sermon" href="https://www.youtube.com/watch?v={{ s.id }}" target="_blank" rel="noopener">
+                        <span class="nbc-sermon-thumb">
+                            <img src="https://i.ytimg.com/vi/{{ s.id }}/hqdefault.jpg" alt="" width="480" height="360" loading="lazy" decoding="async">
+                            <span class="nbc-sermon-play" aria-hidden="true"></span>
+                        </span>
+                        <span class="nbc-sermon-date">{{ s.date }}</span>
+                        <strong class="nbc-sermon-title">{{ s.title }}</strong>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    {% endif %}
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

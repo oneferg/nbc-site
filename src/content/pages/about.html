@@ -1,0 +1,116 @@
+---
+title: "About Us & Our Pastor | New Beginnings in Christ | Laurens, SC"
+description: "Meet Pastor Dennis Cancel and the leadership of New Beginnings in Christ, an Apostolic, holiness church in Laurens, SC built on one Lord, one faith, one baptism."
+permalink: "/about/"
+bannerTitle: "About Us"
+bannerTopper: "Our Story"
+bannerText: "Built on the Word and held together by love. Who we are, what we believe, and the people God has called to lead this house."
+bannerImg: "sanctuary"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section id="RPsbs-1445">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source srcset="{% getUrl "/assets/images/welcome.jpg" | resize({ width: 1300, height: 1200 }) | webp %}" type="image/webp">
+                <img src="{% getUrl "/assets/images/welcome.jpg" | resize({ width: 1300, height: 1200 }) | jpeg %}" alt="A church leader speaking with the congregation" width="650" height="600" loading="lazy" decoding="async">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">How It Began</span>
+                <h2 class="cs-title nbc-ornament">It Began With a Calling</h2>
+                <p class="cs-text">
+                    Pastor Dennis Cancel has been saved for more than twenty years. Along that walk, God placed a calling on his life he couldn't ignore: go and speak the good news of Jesus Christ, and teach the truth straight from Scripture.
+                </p>
+                <ul class="cs-card-group">
+                    <li class="cs-li">
+                        <picture class="cs-li-picture"><img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="" width="32" height="32"></picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Saved for 20+ Years</h3>
+                            <p class="cs-li-text">A pastor who has walked with the Lord for more than two decades.</p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture"><img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="" width="32" height="32"></picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Started With Three</h3>
+                            <p class="cs-li-text">Pastor Cancel, his wife, and his cousin. No building fund, just faith, prayer, and the Word.</p>
+                        </div>
+                    </li>
+                    <li class="cs-li">
+                        <picture class="cs-li-picture"><img class="cs-li-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/s4.svg" alt="" width="32" height="32"></picture>
+                        <div class="cs-flex">
+                            <h3 class="cs-h3">Open to Everyone</h3>
+                            <p class="cs-li-text">Our doors are open to anyone hungry for a true word from the Bible.</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/visit/" class="cs-button-solid">Plan Your Visit</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services-1121">
+        <div class="cs-container">
+            <ul class="cs-card-group">
+                <li class="cs-item">
+                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="" aria-hidden="true" width="48" height="48"></div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">One Lord</h2>
+                        <p class="cs-item-text">There is one God, revealed to us in Jesus Christ.</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="" aria-hidden="true" width="48" height="48"></div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">One Faith</h2>
+                        <p class="cs-item-text">Salvation through faith in Jesus Christ, as the apostles taught.</p>
+                    </div>
+                </li>
+                <li class="cs-item">
+                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="" aria-hidden="true" width="48" height="48"></div>
+                    <div class="cs-flex">
+                        <h2 class="cs-h2">One Baptism</h2>
+                        <p class="cs-item-text">The apostolic pattern of baptism, and a holy life that follows.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="meet-team-1141">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Leadership</span>
+                <h2 class="cs-title nbc-ornament">The People Who Serve This House</h2>
+            </div>
+            <ul class="cs-card-group">
+                {% set leaders = [
+                    ["Dennis Cancel", "Pastor & Founder"],
+                    ["[First Lady's Name]", "Pastor's Wife"],
+                    ["[Co-Pastor & Wife]", "Co-Pastor"],
+                    ["[Deacon Names]", "Deacon Board"]
+                ] %}
+                {% for l in leaders %}
+                <li class="cs-item">
+                    <picture class="cs-picture">
+                        <span class="nbc-tag">Photo needed</span>
+                        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/pastor.jpg" | resize({ width: 610, height: 814 }) | jpeg %}" alt="{{ l[0] }}" width="305" height="407">
+                    </picture>
+                    <div class="cs-info">
+                        <span class="cs-name">{{ l[0] }}</span>
+                        <span class="cs-job">{{ l[1] }}</span>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

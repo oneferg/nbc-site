@@ -1,0 +1,102 @@
+---
+title: "Plan Your Visit | Church Service Times in Laurens, SC | New Beginnings in Christ"
+description: "Visiting New Beginnings in Christ in Laurens, SC? Sunday worship is at 11:00 AM and Bible study is Wednesdays at 6:00 PM at 110 Hillcrest Dr. Here's what to expect."
+permalink: "/visit/"
+bannerTitle: "Plan a Visit"
+bannerTopper: "First Time?"
+bannerText: "There's a seat saved for you. Here's everything you need to know before you walk through our doors."
+bannerImg: "worship"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/local.css">
+{% endblock %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section class="nbc-section">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Your First Sunday</span>
+                    <h2 class="cs-title nbc-ornament">What to Expect</h2>
+                    <p class="cs-text">No pressure, no spotlight. Just a church family glad you came.</p>
+                </div>
+                <a href="{{ client.address.mapLink }}" class="cs-button-solid" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+            <ol class="nbc-grid nbc-four">
+                <li class="nbc-tile"><h3>A Warm Welcome</h3><p>Someone will greet you at the door and help you find a seat.</p></li>
+                <li class="nbc-tile"><h3>Praise &amp; Prayer</h3><p>We open with worship and prayer. Join in however you feel comfortable.</p></li>
+                <li class="nbc-tile"><h3>The Word</h3><p>Pastor Cancel teaches directly from Scripture. Bring a Bible if you have one.</p></li>
+                <li class="nbc-tile"><h3>Fellowship</h3><p>Stay a few minutes afterward to meet the pastor and our church family.</p></li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="faq-1466">
+        <div class="cs-container">
+            <picture class="cs-picture">
+                <source srcset="{% getUrl "/assets/images/study.jpg" | resize({ width: 1044, height: 1218 }) | webp %}" type="image/webp">
+                <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/study.jpg" | resize({ width: 1044, height: 1218 }) | jpeg %}" alt="" width="522" height="609">
+            </picture>
+            <div class="cs-content">
+                <span class="cs-topper">Questions</span>
+                <h2 class="cs-title nbc-ornament">Good to Know Before You Visit</h2>
+                <ul class="cs-faq-group">
+                    <li class="cs-faq-item active">
+                        <button class="cs-button"><span class="cs-button-text">How long is the Sunday service?</span></button>
+                        <p class="cs-item-p">[Confirm with pastor] Most Sunday services last about [1.5–2] hours.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">What should I wear?</span></button>
+                        <p class="cs-item-p">[Confirm with pastor] Many of our members dress modestly in keeping with our holiness standards, but come as you are. You will be welcomed.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Can I bring my children?</span></button>
+                        <p class="cs-item-p">[Confirm with pastor] Yes. Children are welcome to worship alongside their families.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Where do I park?</span></button>
+                        <p class="cs-item-p">[Confirm parking details] Parking is available at the church at 110 Hillcrest Dr.</p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button"><span class="cs-button-text">Can I get something notarized at the church?</span></button>
+                        <p class="cs-item-p">Yes. A notary is available on site. Please call {{ client.phoneFormatted }} ahead of time to schedule.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.querySelectorAll("#faq-1466 .cs-faq-item").forEach((item) => {
+            item.querySelector(".cs-button").addEventListener("click", () => item.classList.toggle("active"));
+        });
+    </script>
+
+    <section class="nbc-section">
+        <div class="cs-container nbc-split">
+            <div>
+                <span class="cs-topper">Where We Are</span>
+                <h2 class="cs-title nbc-ornament">Find Us in Laurens</h2>
+                <ul class="nbc-info">
+                    <li><strong>Address</strong><a href="{{ client.address.mapLink }}" target="_blank" rel="noopener">{{ client.address.lineOne }}, {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}</a></li>
+                    <li><strong>Phone</strong><a href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a></li>
+                    <li><strong>Service Times</strong><span>Sun 11:00 AM · Wed 6:00 PM</span></li>
+                </ul>
+                <div class="nbc-buttons">
+                    <a href="{{ client.address.mapLink }}" class="cs-button-solid" target="_blank" rel="noopener">Get Directions</a>
+                </div>
+            </div>
+            <div class="nbc-map">
+                <iframe title="Map to New Beginnings in Christ, 110 Hillcrest Dr, Laurens SC" src="https://maps.google.com/maps?q=110%20Hillcrest%20Dr%20Laurens%20SC%2029360&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

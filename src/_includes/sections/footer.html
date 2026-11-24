@@ -1,0 +1,52 @@
+<!-- ============================================ -->
+<!--                   Footer                     -->
+<!-- ============================================ -->
+
+<footer id="cs-footer-275">
+    <div class="cs-container">
+        <div class="cs-logo-group">
+            <a aria-label="go back to home" class="cs-logo" href="/">
+                <img class="cs-logo-img nbc-footer-crest" loading="lazy" decoding="async" src="/assets/images/logo-crest.png" alt="New Beginnings in Christ crest" width="160" height="162">
+            </a>
+            <p class="cs-text">
+                Apostolic teaching. Holiness living. A warm welcome for everyone looking for a true word from the Bible.
+            </p>
+            <div class="cs-social">
+                <a class="cs-social-link" aria-label="find us on Google Maps" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/google.svg" alt="" width="11" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="visit our Facebook page" href="{{ client.socials.facebook }}" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/facebook.svg" alt="" width="6" height="11">
+                </a>
+                <a class="cs-social-link" aria-label="watch us on YouTube" href="{{ client.socials.youtube }}" target="_blank" rel="noopener">
+                    <img class="cs-social-img" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/youtube.svg" alt="" width="12" height="11">
+                </a>
+            </div>
+        </div>
+        <ul class="cs-nav">
+            <li class="cs-nav-li"><span class="cs-header">Explore</span></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/">Home</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/about/">About</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/visit/">Plan a Visit</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/watch/">Watch Online</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/give/">Give</a></li>
+            <li class="cs-nav-li"><a class="cs-nav-link" href="/contact/">Contact</a></li>
+        </ul>
+        <ul class="cs-nav">
+            <li class="cs-nav-li"><span class="cs-header">Service Times</span></li>
+            <li class="cs-nav-li"><span class="cs-nav-link">Sunday Worship · 11:00 AM</span></li>
+            <li class="cs-nav-li"><span class="cs-nav-link">Wednesday Bible Study · 6:00 PM</span></li>
+        </ul>
+        <ul class="cs-contact">
+            <li class="cs-nav-li"><span class="cs-header">Contact</span></li>
+            <li class="cs-contact-li">
+                <a class="cs-contact-link cs-address" href="{{ client.address.mapLink }}" target="_blank" rel="noopener">
+                    {{ client.address.lineOne }}, <br>
+                    {{ client.address.city }}, {{ client.address.state }} {{ client.address.zip }}
+                </a>
+            </li>
+            <li class="cs-contact-li"><a class="cs-contact-link" href="tel:{{ client.phoneForTel }}">{{ client.phoneFormatted }}</a></li>
+            <li class="cs-contact-li"><a class="cs-contact-link" href="mailto:{{ client.email }}">{{ client.email }}</a></li>
+        </ul>
+    </div>
+</footer>

@@ -1,0 +1,21 @@
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-51">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">You Belong Here</span>
+            <h2 class="cs-title">Looking for a Church Home?</h2>
+            <p class="cs-text">
+                Tell us a little about yourself and what you're looking for in a church. Pastor Cancel or one of our leaders will reach out personally.
+            </p>
+            <a href="/contact/" class="cs-button-solid">Connect With Us</a>
+        </div>
+    </div>
+    <picture class="cs-picture">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/sanctuary.jpg" | resize({ width: 600, height: 700 }) | webp %}" type="image/webp">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/sanctuary.jpg" | resize({ width: 2500, height: 555 }) | webp %}" type="image/webp">
+        <img src="{% getUrl "/assets/images/sanctuary.jpg" | resize({ width: 2500, height: 555 }) | jpeg %}" alt="" width="1920" height="426" loading="lazy" decoding="async">
+    </picture>
+</section>

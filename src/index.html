@@ -1,0 +1,159 @@
+---
+title: "New Beginnings in Christ | Apostolic Church in Laurens, SC"
+description: "New Beginnings in Christ is an Apostolic church in Laurens, SC. Join us Sundays at 11:00 AM for worship and Wednesdays at 6:00 PM for Bible study. Everyone is welcome."
+permalink: "/"
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    {% include "components/home-schema.html" %}
+{% endblock %}
+
+{% block body %}
+
+    <section id="nbc-split">
+        <div class="nbc-split-content">
+            <span class="cs-topper">Apostolic Church · Laurens, SC</span>
+            <h1 class="cs-title">Your New Beginning Starts Here</h1>
+            <p class="cs-text">
+                A Bible-teaching church family where God's Word is preached plainly, a holiness lifestyle is lived out together, and everyone who walks through the door is welcomed home.
+            </p>
+            <p class="nbc-split-line">One Lord. One Faith. One Baptism.</p>
+            <div class="nbc-buttons">
+                <a href="/visit/" class="cs-button-solid">Plan Your Visit</a>
+                <a href="/watch/" class="nbc-button-ghost">Watch Online</a>
+            </div>
+            <ul class="nbc-split-times">
+                <li><strong>Sunday Worship</strong><span>11:00 AM</span></li>
+                <li><strong>Wednesday Bible Study</strong><span>6:00 PM</span></li>
+            </ul>
+        </div>
+        <picture class="nbc-split-photo">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/worship.jpg" | resize({ width: 800, height: 700 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1400, height: 1300 }) | webp %}" type="image/webp">
+            <img src="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1400, height: 1300 }) | jpeg %}" alt="Praise team leading worship" width="700" height="650" loading="eager" decoding="async" fetchpriority="high">
+        </picture>
+    </section>
+
+    <section class="nbc-section">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <h2 class="cs-title nbc-ornament">Gather With Us</h2>
+                    <p class="cs-text">Every week there's a place for you to worship, learn, and grow in the Word.</p>
+                </div>
+                <a href="/visit/" class="cs-button-solid">Plan a Visit</a>
+            </div>
+            <ul class="nbc-overlay-group">
+                {% set cards = [
+                    ["hero", "Sunday Worship", "Sundays at 11:00 AM", "/visit/"],
+                    ["study", "Bible Study", "Wednesdays at 6:00 PM", "/visit/"],
+                    ["gallery/g1", "Watch Online", "Services on YouTube", "/watch/"]
+                ] %}
+                {% for c in cards %}{% set csrc = "/assets/images/" + c[0] + ".jpg" %}
+                <li>
+                    <a class="nbc-overlay" href="{{ c[3] }}">
+                        <picture>
+                            <source srcset="{% getUrl csrc | resize({ width: 800, height: 900 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl csrc | resize({ width: 800, height: 900 }) | jpeg %}" alt="" width="400" height="450" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="nbc-overlay-body">
+                            <strong>{{ c[1] }}</strong>
+                            <span>{{ c[2] }}</span>
+                        </span>
+                        <span class="nbc-overlay-arrow" aria-hidden="true"></span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section class="nbc-section nbc-tint">
+        <div class="cs-container nbc-watch">
+            <div>
+                <span class="cs-topper">Watch Online</span>
+                <h2 class="cs-title nbc-ornament">Worship With Us From Anywhere</h2>
+                <p class="cs-text">Can't make it Sunday? Our services and Wednesday Bible studies stream on YouTube, so you can hear the Word wherever you are this week.</p>
+                <div class="nbc-buttons" style="margin-top:2rem">
+                    <a href="/watch/" class="cs-button-solid">More Sermons</a>
+                </div>
+            </div>
+            {% include "components/player.html" %}
+        </div>
+    </section>
+
+    <section id="nbc-story">
+        <picture class="nbc-story-bg">
+            <source srcset="{% getUrl "/assets/images/sanctuary.jpg" | resize({ width: 2400, height: 1300 }) | webp %}" type="image/webp">
+            <img src="{% getUrl "/assets/images/sanctuary.jpg" | resize({ width: 2400, height: 1300 }) | jpeg %}" alt="" aria-hidden="true" width="1920" height="1040" loading="lazy" decoding="async">
+        </picture>
+        <div class="cs-container">
+            <picture class="nbc-story-photo">
+                <source srcset="{% getUrl "/assets/images/welcome.jpg" | resize({ width: 1000, height: 1100 }) | webp %}" type="image/webp">
+                <img src="{% getUrl "/assets/images/welcome.jpg" | resize({ width: 1000, height: 1100 }) | jpeg %}" alt="A church leader speaking with the congregation" width="500" height="550" loading="lazy" decoding="async">
+            </picture>
+            <div class="nbc-story-content">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">It Started With Three People and a Calling</h2>
+                <p class="cs-text">
+                    Pastor Dennis Cancel has been saved for more than twenty years. God placed a calling on his life to go and speak the good news of Jesus Christ, and to teach the truth straight from Scripture.
+                </p>
+                <p class="cs-text">
+                    New Beginnings in Christ began with just three people: Pastor Cancel, his wife, and his cousin. No building fund, no big plan. Just faith, prayer, and the Word of God. Today our doors are open to anyone looking for the right journey to heaven.
+                </p>
+                <a href="/about/" class="cs-button-solid">Read Our Story</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-1144">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-content-flex">
+                    <span class="cs-topper">Mark Your Calendar</span>
+                    <h2 class="cs-title nbc-ornament">Special Services &amp; Events</h2>
+                </div>
+                <a href="/contact/" class="cs-button-solid">Ask About Events</a>
+            </div>
+            <ul class="cs-card-group">
+                {% for e in events %}{% set esrc = "/assets/images/" + e.img + ".jpg" %}
+                <li class="cs-item">
+                    <picture class="cs-picture" aria-hidden="true">
+                        <source srcset="{% getUrl esrc | resize({ width: 610, height: 360 }) | webp %}" type="image/webp">
+                        <img loading="lazy" decoding="async" src="{% getUrl esrc | resize({ width: 610, height: 360 }) | jpeg %}" alt="" width="305" height="180">
+                    </picture>
+                    <div class="cs-flex">
+                        <span class="cs-date">{{ e.month }} {{ e.day }}</span>
+                        <h3 class="cs-h3">{{ e.title }}</h3>
+                        <p class="cs-item-text">{{ e.time }} · {{ e.place }}. {{ e.text }}</p>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Church Life</span>
+                    <h2 class="cs-title nbc-ornament">Moments From Our Church Family</h2>
+                </div>
+            </div>
+            <div class="cs-gallery">
+                {% for g in ["g1","g2","g3","g4","g5","g6","g7","g8","g9"] %}{% set gsrc = "/assets/images/gallery/" + g + ".jpg" %}
+                <picture class="cs-image">
+                    <source srcset="{% getUrl gsrc | resize({ width: 610, height: 800 }) | webp %}" type="image/webp">
+                    <img loading="lazy" decoding="async" src="{% getUrl gsrc | resize({ width: 610, height: 800 }) | jpeg %}" alt="Worship and fellowship" width="305" height="400">
+                </picture>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}
