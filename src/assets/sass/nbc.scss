@@ -1708,3 +1708,11 @@ $line: #e4e2dc;
 		display: block;
 	}
 }
+
+@media only screen and (min-width: 64rem) {
+	#nbc-split:not(.nbc-split-page) .nbc-split-photo {
+		margin-top: 11.25rem;
+		border-top-left-radius: 1rem;
+		overflow: hidden;
+	}
+}
