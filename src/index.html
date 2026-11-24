@@ -136,6 +136,29 @@ tags: "sitemap"
         </div>
     </section>
 
+    <section class="nbc-section nbc-tint">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Church Announcements</span>
+                    <h2 class="cs-title nbc-ornament">What's Happening at NBC</h2>
+                </div>
+            </div>
+            <ul class="nbc-flyers">
+                {% for f in flyers %}{% set fsrc = "/assets/images/flyers/" + f.img + ".jpg" %}
+                <li>
+                    <a href="{% getUrl fsrc | resize({ width: 1400 }) | jpeg %}" target="_blank" rel="noopener">
+                        <picture>
+                            <source srcset="{% getUrl fsrc | resize({ width: 700 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl fsrc | resize({ width: 700 }) | jpeg %}" alt="{{ f.alt }}" loading="lazy" decoding="async">
+                        </picture>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
     <section id="gallery-1446">
         <div class="cs-container">
             <div class="cs-content">
