@@ -53,7 +53,20 @@
                         </a>
                     </li>
                     <li class="cs-li cs-dropdown">
-                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/about/" or page.url == "/leaders/" or page.url == "/beliefs/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="about-dropdown-toggle">
+                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/leaders/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="leaders-dropdown-toggle">
+                            Our Leaders
+                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                        </button>
+                        <ul class="cs-drop-ul" aria-labelledby="leaders-dropdown-toggle">
+                            {% for l in leaders %}
+                            <li class="cs-drop-li">
+                                <a href="/leaders/#{{ l.id }}" class="cs-li-link cs-drop-link">{{ l.menu }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li class="cs-li cs-dropdown">
+                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/about/" or page.url == "/beliefs/" or page.url == "/mission/" or page.url == "/ministries/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="about-dropdown-toggle">
                             About
                             <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
                         </button>
@@ -62,10 +75,13 @@
                                 <a href="/about/" class="cs-li-link cs-drop-link">Our Story</a>
                             </li>
                             <li class="cs-drop-li">
-                                <a href="/leaders/" class="cs-li-link cs-drop-link">Our Leaders</a>
+                                <a href="/mission/" class="cs-li-link cs-drop-link">Mission &amp; Vision</a>
                             </li>
                             <li class="cs-drop-li">
                                 <a href="/beliefs/" class="cs-li-link cs-drop-link">What We Believe</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/ministries/" class="cs-li-link cs-drop-link">Ministries</a>
                             </li>
                         </ul>
                     </li>
@@ -76,7 +92,7 @@
                         </button>
                         <ul class="cs-drop-ul" aria-labelledby="visit-dropdown-toggle">
                             <li class="cs-drop-li">
-                                <a href="/visit/" class="cs-li-link cs-drop-link">Plan a Visit</a>
+                                <a href="/visit/" class="cs-li-link cs-drop-link">Service Times &amp; Directions</a>
                             </li>
                             <li class="cs-drop-li">
                                 <a href="/watch/" class="cs-li-link cs-drop-link">Watch Online</a>

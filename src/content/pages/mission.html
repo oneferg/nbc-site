@@ -1,0 +1,58 @@
+---
+title: "Mission & Vision | New Beginnings in Christ | Laurens, SC"
+description: "The mission, vision, and history of New Beginnings in Christ in Laurens, SC: Reform, Renew, Revive, Restore."
+permalink: "/mission/"
+bannerTitle: "Mission & Vision"
+bannerTopper: "About Us"
+bannerText: "Why our church exists, where we believe God is leading us, and how we got here."
+bannerImg: "sanctuary"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section class="nbc-section">
+        <div class="cs-container nbc-mv">
+            <div class="nbc-mv-card nbc-mv-dark">
+                <span class="cs-topper">Our Mission</span>
+                <p>{{ mission.mission }}</p>
+            </div>
+            <div class="nbc-mv-card">
+                <span class="cs-topper">Our Vision</span>
+                <p>{{ mission.vision }}</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="nbc-section nbc-tint">
+        <div class="cs-container">
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">The 4 R's</span>
+                    <h2 class="cs-title nbc-ornament">What Guides Us</h2>
+                </div>
+            </div>
+            <ol class="nbc-grid nbc-four">
+                {% for v in mission.values %}
+                <li class="nbc-tile"><h3>{{ v.title }}</h3><p>{{ v.text }}</p></li>
+                {% endfor %}
+            </ol>
+        </div>
+    </section>
+
+    <section class="nbc-section">
+        <div class="cs-container nbc-split">
+            <div>
+                <span class="cs-topper">Our History</span>
+                <h2 class="cs-title nbc-ornament">How It All Started</h2>
+            </div>
+            <p class="cs-text nbc-history">{{ mission.history }}</p>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

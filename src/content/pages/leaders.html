@@ -18,7 +18,7 @@ bannerImg: "welcome"
         <div class="cs-container">
             <ul class="nbc-leaders">
                 {% for l in leaders %}{% set lsrc = "/assets/images/" + l.photo + ".jpg" %}
-                <li class="nbc-leader-row">
+                <li class="nbc-leader-row" id="{{ l.id }}">
                     <picture class="nbc-leader-photo">
                         {% if l.photo == "pastor" %}<span class="nbc-tag">Photo needed</span>{% endif %}
                         <source srcset="{% getUrl lsrc | resize({ width: 800, height: 1000 }) | webp %}" type="image/webp">
