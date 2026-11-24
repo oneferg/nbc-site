@@ -29,11 +29,16 @@ module.exports = [
 		],
 	},
 	{
-		id: "co-pastor",
-		menu: "[Co-Pastor's Name]",
-		name: "[Co-Pastor's Name & Wife's Name]",
+		id: "bishop-carr",
+		menu: "Bishop Bill R. Carr Jr.",
+		name: "Bishop Bill R. Carr Jr. & Lady Jody A. Carr",
 		role: "Co-Pastor",
-		photo: "pastor",
-		bio: ["[Bio in their own words.]"],
+		photo: "carr",
+		bio: [
+			"Bishop Bill R. Carr Jr. was born in Indianapolis, IN to Billy Ray Carr Sr. and Glenda Gail Carr of Indiana and is an only child. District Elder Bill Carr is married to First Lady Jody A. Carr who is his best friend and Outreach Pastoral Ministry Partner. They have three children: Britany McManigal, Emily Sizemore, and Austin Carr. They are also blessed to have 6 grandchildren whom they love dearly.",
+			"District Elder Bill Carr responded to the call for salvation in 1986 as a young teenage boy at Revival Tabernacle in San Diego, CA, a oneness Pentecostal church, and was pastored by the Honorable Late Bishop David F. Gray. District Elder Carr attended Tabernacle Christian Academy at Revival Tabernacle and received his GED. He also attended CSTI (Christian Service Training Institute) at Revival Tabernacle.",
+			"District Elder Carr was fully converted in 1988 at Revival Tabernacle and was baptized according to the Apostles doctrine (Acts 2:38, Matthew 28:19) in the name of Jesus Christ, and his sins were washed away. District Elder Carr received the baptism of the Holy Ghost with the evidence of speaking in tongues according to Acts 2:1-4 and Acts 2:38.",
+			"In 1990 District Elder Carr was called to preach at Revival Tabernacle in the middle of a youth revival at the RIOT center (Revival In Our Time) located at Revival Tabernacle. District Elder Carr moved from California to Indiana with his parents. There he attended Cavalry Tabernacle and other area Pentecostal Oneness churches. District Elder Carr continued in this truth throughout his entire teenage life and as a young adult growing under many great men of God receiving from the Lord.",
+		],
 	},
 ];
