@@ -21,10 +21,4 @@ module.exports = [
 		photo: "pastor",
 		bio: "[Bio in their own words.]",
 	},
-	{
-		name: "[Deacon Names]",
-		role: "Deacon Board",
-		photo: "pastor",
-		bio: "[A few words about the deacons and how they serve.]",
-	},
 ];
