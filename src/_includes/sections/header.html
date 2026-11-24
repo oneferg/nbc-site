@@ -52,10 +52,22 @@
                             Home
                         </a>
                     </li>
-                    <li class="cs-li">
-                        <a href="/about/" class="cs-li-link {% if page.url == "/about/" %} cs-active {% endif %}" {% if page.url == "/about/" %} aria-current="page" {% endif %}>
+                    <li class="cs-li cs-dropdown">
+                        <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/about/" or page.url == "/leaders/" or page.url == "/beliefs/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="about-dropdown-toggle">
                             About
-                        </a>
+                            <img class="cs-drop-icon" src="/assets/svgs/dropdown.svg" alt="" width="15" height="15" decoding="async" aria-hidden="true">
+                        </button>
+                        <ul class="cs-drop-ul" aria-labelledby="about-dropdown-toggle">
+                            <li class="cs-drop-li">
+                                <a href="/about/" class="cs-li-link cs-drop-link">Our Story</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/leaders/" class="cs-li-link cs-drop-link">Our Leaders</a>
+                            </li>
+                            <li class="cs-drop-li">
+                                <a href="/beliefs/" class="cs-li-link cs-drop-link">What We Believe</a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="cs-li cs-dropdown">
                         <button class="cs-li-link cs-dropdown-toggle {% if page.url == "/visit/" or page.url == "/watch/" %} cs-active {% endif %}" aria-haspopup="menu" aria-expanded="false" id="visit-dropdown-toggle">

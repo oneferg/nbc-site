@@ -54,62 +54,40 @@ bannerImg: "sanctuary"
         </div>
     </section>
 
-    <section id="services-1121">
+    <section class="nbc-section nbc-tint">
         <div class="cs-container">
-            <ul class="cs-card-group">
-                <li class="cs-item">
-                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s1.svg" alt="" aria-hidden="true" width="48" height="48"></div>
-                    <div class="cs-flex">
-                        <h2 class="cs-h2">One Lord</h2>
-                        <p class="cs-item-text">There is one God, revealed to us in Jesus Christ.</p>
-                    </div>
+            <div class="nbc-row-head">
+                <div>
+                    <span class="cs-topper">Learn More</span>
+                    <h2 class="cs-title nbc-ornament">Get to Know Our Church</h2>
+                </div>
+            </div>
+            <ul class="nbc-overlay-group nbc-overlay-two">
+                <li>
+                    <a class="nbc-overlay" href="/leaders/">
+                        <picture>
+                            <source srcset="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1000, height: 700 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl "/assets/images/worship.jpg" | resize({ width: 1000, height: 700 }) | jpeg %}" alt="" width="500" height="350" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="nbc-overlay-body"><strong>Our Leaders</strong><span>Meet the pastor and the people who serve</span></span>
+                        <span class="nbc-overlay-arrow" aria-hidden="true"></span>
+                    </a>
                 </li>
-                <li class="cs-item">
-                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s2.svg" alt="" aria-hidden="true" width="48" height="48"></div>
-                    <div class="cs-flex">
-                        <h2 class="cs-h2">One Faith</h2>
-                        <p class="cs-item-text">Salvation through faith in Jesus Christ, as the apostles taught.</p>
-                    </div>
-                </li>
-                <li class="cs-item">
-                    <div class="cs-image-group"><img class="cs-icon" loading="lazy" decoding="async" src="/assets/svgs/s3.svg" alt="" aria-hidden="true" width="48" height="48"></div>
-                    <div class="cs-flex">
-                        <h2 class="cs-h2">One Baptism</h2>
-                        <p class="cs-item-text">The apostolic pattern of baptism, and a holy life that follows.</p>
-                    </div>
+                <li>
+                    <a class="nbc-overlay" href="/beliefs/">
+                        <picture>
+                            <source srcset="{% getUrl "/assets/images/bible.jpg" | resize({ width: 1000, height: 700 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl "/assets/images/bible.jpg" | resize({ width: 1000, height: 700 }) | jpeg %}" alt="" width="500" height="350" loading="lazy" decoding="async">
+                        </picture>
+                        <span class="nbc-overlay-body"><strong>What We Believe</strong><span>Our beliefs and the scriptures behind them</span></span>
+                        <span class="nbc-overlay-arrow" aria-hidden="true"></span>
+                    </a>
                 </li>
             </ul>
         </div>
     </section>
 
-    <section id="meet-team-1141">
-        <div class="cs-container">
-            <div class="cs-content">
-                <span class="cs-topper">Leadership</span>
-                <h2 class="cs-title nbc-ornament">The People Who Serve This House</h2>
-            </div>
-            <ul class="cs-card-group">
-                {% set leaders = [
-                    ["Dennis Cancel", "Pastor & Founder"],
-                    ["[First Lady's Name]", "Pastor's Wife"],
-                    ["[Co-Pastor & Wife]", "Co-Pastor"],
-                    ["[Deacon Names]", "Deacon Board"]
-                ] %}
-                {% for l in leaders %}
-                <li class="cs-item">
-                    <picture class="cs-picture">
-                        <span class="nbc-tag">Photo needed</span>
-                        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/pastor.jpg" | resize({ width: 610, height: 814 }) | jpeg %}" alt="{{ l[0] }}" width="305" height="407">
-                    </picture>
-                    <div class="cs-info">
-                        <span class="cs-name">{{ l[0] }}</span>
-                        <span class="cs-job">{{ l[1] }}</span>
-                    </div>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
-    </section>
+    
 
     {% include 'sections/cta.html' %}
 

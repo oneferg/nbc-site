@@ -1,0 +1,43 @@
+---
+title: "What We Believe | New Beginnings in Christ | Laurens, SC"
+description: "The beliefs of New Beginnings in Christ, an Apostolic church in Laurens, SC, with the scriptures behind them."
+permalink: "/beliefs/"
+bannerTitle: "What We Believe"
+bannerTopper: "About Us"
+bannerText: "These are the beliefs we hold as a church, along with the scriptures they come from."
+bannerImg: "bible"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block body %}
+
+    {% include "components/banner.html" %}
+
+    <section class="nbc-section">
+        <div class="cs-container">
+            <ol class="nbc-beliefs">
+                {% for b in beliefs %}
+                <li class="nbc-belief">
+                    <div class="nbc-belief-main">
+                        <span class="nbc-belief-num">{{ "0" if loop.index < 10 }}{{ loop.index }}</span>
+                        <h2 class="nbc-belief-title">{{ b.title }}</h2>
+                        <p class="nbc-belief-text">{{ b.statement }}</p>
+                    </div>
+                    <div class="nbc-belief-scripture">
+                        {% for s in b.scriptures %}
+                        <blockquote>
+                            <p>"{{ s.text }}"</p>
+                            <cite>{{ s.ref }}</cite>
+                        </blockquote>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

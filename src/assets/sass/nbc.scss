@@ -1405,3 +1405,144 @@ $line: #e4e2dc;
 		}
 	}
 }
+
+.nbc-beliefs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid #e4e2dc;
+}
+
+.nbc-belief {
+	display: grid;
+	gap: 1.5rem;
+	padding: clamp(2rem, 4vw, 3rem) 0;
+	border-bottom: 1px solid #e4e2dc;
+}
+
+.nbc-belief-num {
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	color: var(--secondary);
+	margin-bottom: 0.75rem;
+}
+
+.nbc-belief-title {
+	font-family: var(--headerFont);
+	font-size: clamp(1.5rem, 3vw, 2rem);
+	line-height: 1.25;
+	color: var(--headerColor);
+	margin: 0 0 1rem;
+}
+
+.nbc-belief-text {
+	color: var(--bodyTextColor);
+	font-size: 1.0625rem;
+	line-height: 1.75;
+	margin: 0;
+	max-width: 36rem;
+}
+
+.nbc-belief-scripture {
+	display: grid;
+	gap: 1rem;
+	align-content: start;
+
+	blockquote {
+		margin: 0;
+		padding: 1.5rem 1.75rem;
+		background-color: #f6f5f2;
+		border-left: 3px solid var(--secondary);
+		border-radius: 0 0.75rem 0.75rem 0;
+	}
+
+	p {
+		font-family: var(--headerFont);
+		font-style: italic;
+		font-size: 1.0625rem;
+		line-height: 1.65;
+		color: var(--headerColor);
+		margin: 0 0 0.75rem;
+	}
+
+	cite {
+		font-style: normal;
+		font-size: 0.8125rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--secondary);
+	}
+}
+
+.nbc-leaders {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: clamp(3rem, 6vw, 5rem);
+}
+
+.nbc-leader-row {
+	display: grid;
+	gap: 2rem;
+	align-items: center;
+}
+
+.nbc-leader-photo {
+	display: block;
+	position: relative;
+	aspect-ratio: 4 / 5;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.nbc-leader-info {
+	.cs-title {
+		margin-bottom: 1.25rem;
+	}
+
+	.cs-text {
+		line-height: 1.75;
+		max-width: 38rem;
+	}
+}
+
+@media only screen and (min-width: 48rem) {
+	.nbc-leader-row {
+		grid-template-columns: 0.7fr 1fr;
+		gap: 4rem;
+	}
+
+	.nbc-leader-row:nth-child(even) .nbc-leader-photo {
+		order: 2;
+	}
+}
+
+@media only screen and (min-width: 64rem) {
+	.nbc-belief {
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+
+	.nbc-leader-row {
+		grid-template-columns: 0.55fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 48rem) {
+	.nbc-overlay-group.nbc-overlay-two {
+		grid-template-columns: repeat(2, 1fr);
+
+		.nbc-overlay {
+			aspect-ratio: 16 / 10;
+		}
+	}
+}
